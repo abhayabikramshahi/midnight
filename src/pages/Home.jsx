@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import PostCard from "../component/PostCard";
 
 function Home() {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Home() {
         <h1>Midnight MVP Version</h1>
         <button onClick={goToProfile}>profile</button>
       </div>
-      <p>Home</p>
+     <PostCard />
     </>
   );
 }
