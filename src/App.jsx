@@ -1,14 +1,22 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import EditProfile from './component/EditProfile';
+import Profile from './pages/Profile';
+import Footer from './component/Footer';
 
 function App() {
   return (
-    <>
-      <div style={{ display: "flex" }}>
-        <h1>Midnight MVP Version</h1>
-        <button>profile</button>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+        </Routes>
+        <Footer />
       </div>
-      <p>Home</p>
-    </>
+    </BrowserRouter>
   );
 }
 
